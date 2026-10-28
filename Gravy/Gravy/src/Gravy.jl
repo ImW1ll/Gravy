@@ -1,17 +1,12 @@
 module Gravy
 
-"""
-    hello(who::String)
+using StaticArrays
+using LinearAlgebra
 
-Return "Hello, `who`".
-"""
-hello(who::String) = "Hello, $who"
+include("particle.jl")
+include("universe.jl")
+include("simulate.jl")
 
-"""
-    domath(x::Number)
-
-Return `x + 5`.
-"""
-domath(x::Number) = x + 5
+export Particle, Universe, Simulate!
 
 end # module Gravy
